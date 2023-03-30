@@ -1,0 +1,45 @@
+.dropdown-container {
+    text-align: left;
+    position: relative;
+    border-radius: 5px;
+    width: 220px;
+  }
+  
+  .dropdown-input {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: bold;
+    font-size: 14px;
+    width: 220px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    transform: translateY(4px);
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 200px;
+    background-color: #fff;
+  }
+
+  .dropdown-item {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .dropdown-item:hover {
+    background-color: #9fc3f870;
+  }
+
+  .complementaryStudiesElectiveDropdown{
+    border: 1px solid;
+    border-color: black;
+    width: 230px;
+    height: 35px;
+  }
