@@ -639,7 +639,7 @@ class TimeTable extends Component {
     this.setState({ sectionDashboard:sectionDashboard })
   }
 
-  stopCourseOptionDisplay =() =>{
+  stopCourseOptionDisplay =() => {
     this.setState({ sectionDashboard:[] })
   }
 
@@ -936,59 +936,59 @@ class TimeTable extends Component {
     const {paletteSeminars} = this.state;
     const {paletteLab} = this.state;
 
-  return (
+    return (
 
-    <div className="App">
-      <Terms setSelectedProgramPlanTerm={this.setSelectedProgramPlanTerm} setCoursesSeminarsLabs={this.setCoursesSeminarsLabs}/>
+      <div className="App">
+        <Terms setSelectedProgramPlanTerm={this.setSelectedProgramPlanTerm} setCoursesSeminarsLabs={this.setCoursesSeminarsLabs}/>
 
 
-      <div className="timetableClass">
+        <div className="timetableClass">
 
-            <div className="leftSideWrapper">
+              <div className="leftSideWrapper">
+                
+                <img src="UAlberta.png"  width="215" height="75"/>
               
-              <img src="UAlberta.png"  width="215" height="75"/>
-             
-              <div className="paletteWrapper">
-                  
-                  <div className="crsWrapper">
-                      <CoursePalette isToolTipOpen={this.state.isToolTipOpen} 
-                        courseList={courseList} paletteCourses={paletteCourses} 
-                        onDragStart={this.onDragStart} 
-                        onDragStop={this.onDragStop}
-                        showToolTip={this.showToolTip}
-                        hideToolTip={this.hideToolTip}
-                      />
-                  </div>
+                <div className="paletteWrapper">
+                    
+                    <div className="crsWrapper">
+                        <CoursePalette isToolTipOpen={this.state.isToolTipOpen} 
+                          courseList={courseList} paletteCourses={paletteCourses} 
+                          onDragStart={this.onDragStart} 
+                          onDragStop={this.onDragStop}
+                          showToolTip={this.showToolTip}
+                          hideToolTip={this.hideToolTip}
+                        />
+                    </div>
 
-                  <div classname="otherPaletteWrapper">
-                    <Seminar paletteSeminars={paletteSeminars} onDragStart={this.onDragStart} onDragStop={this.onDragStop} />
-                    <Lab paletteLab={paletteLab} onDragStart={this.onDragStart} onDragStop={this.onDragStop} />
-                  </div>
+                    <div classname="otherPaletteWrapper">
+                      <Seminar paletteSeminars={paletteSeminars} onDragStart={this.onDragStart} onDragStop={this.onDragStop} />
+                      <Lab paletteLab={paletteLab} onDragStart={this.onDragStart} onDragStop={this.onDragStop} />
+                    </div>
+
+                </div>
+
+                <div className="complementaryStudiesElectiveDropdown">
+                  <Dropdown placeHolder="Complementary Electives"
+                    addCourseSemLabToPalette={this.addCourseSemLabToPalette}
+                    selectedterm={this.state.selectedterm}
+                  />
+                </div>
+
 
               </div>
 
-              <div className="complementaryStudiesElectiveDropdown">
-                <Dropdown placeHolder="Complementary Electives"
-                  addCourseSemLabToPalette={this.addCourseSemLabToPalette}
-                  selectedterm={this.state.selectedterm}
-                />
-              </div>
+                <Table weekdays ={weekdays} tableCourses={tableCourses} addCourse={this.addCourseToTable} deleteCourseFromPalette={this.deleteCourseFromPalette} 
+                deleteSemFromPalette={this.deleteSemFromPalette} deleteLabFromPalette={this.deleteLabFromPalette} rightClickHandler={this.rightClickHandler}
+                stopCourseOptionDisplay={this.stopCourseOptionDisplay}/>
 
+                <div>
+                  <OptionDashBoard sectionDashboard={this.state.sectionDashboard}/>
+                </div>
+        </div>
 
-            </div>
-
-              <Table weekdays ={weekdays} tableCourses={tableCourses} addCourse={this.addCourseToTable} deleteCourseFromPalette={this.deleteCourseFromPalette} 
-              deleteSemFromPalette={this.deleteSemFromPalette} deleteLabFromPalette={this.deleteLabFromPalette} rightClickHandler={this.rightClickHandler}
-              stopCourseOptionDisplay={this.stopCourseOptionDisplay}/>
-
-              <div>
-                <OptionDashBoard sectionDashboard={this.state.sectionDashboard}/>
-              </div>
       </div>
 
-    </div>
-
-  )
+    )
 
   }
 }
