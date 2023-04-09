@@ -94,6 +94,7 @@ const RowCells =(props) => {
                   console.log('timeIndex', timeIndex)
                   props.addCourse(course, dayIndex, timeIndex)
                   
+                  props.stopCourseOptionDisplay()
                   if (course.name.includes("SEM") === true){
                     props.deleteSemFromPalette(course)
                   }
@@ -124,6 +125,8 @@ const RowCells =(props) => {
                 console.log('dayIndex', dayIndex)
                 console.log('timeIndex', props.timeIndex)
                 props.addCourse(course, dayIndex, props.timeIndex)
+                props.stopCourseOptionDisplay()
+                
                 if (course.name.includes("SEM") === true){
                   props.deleteSemFromPalette(course)
                 }
@@ -179,6 +182,7 @@ const TableBody =(props) => {
               timeIndex = {timeIndex} 
               days = {props.tableCourses[timeIndex].day} 
               color = {props.tableCourses[timeIndex].color}
+              stopCourseOptionDisplay={props.stopCourseOptionDisplay}
               tableCourses = {props.tableCourses}/>
           </tr>
         )
@@ -203,7 +207,9 @@ class Table extends Component{
           <div className="wrapper">
             <table>
               <TableHeader weekdays={weekdays}/>
-              <TableBody tableCourses={tableCourses} addCourse={this.props.addCourse} deleteCourseFromPalette={this.props.deleteCourseFromPalette} deleteSemFromPalette={this.props.deleteSemFromPalette} deleteLabFromPalette={this.props.deleteLabFromPalette} rightClickHandler={this.props.rightClickHandler}/>
+              <TableBody tableCourses={tableCourses} addCourse={this.props.addCourse} deleteCourseFromPalette={this.props.deleteCourseFromPalette} 
+              deleteSemFromPalette={this.props.deleteSemFromPalette} deleteLabFromPalette={this.props.deleteLabFromPalette} 
+              rightClickHandler={this.props.rightClickHandler} stopCourseOptionDisplay={this.props.stopCourseOptionDisplay}/>
             </table>
           </div>
         )

@@ -316,7 +316,7 @@ class TimeTable extends Component {
           paletteCourses: [
           {
             name: "ECE 325",
-            color: "blue",
+            color: "orange",
             extendedName: "Object-Oriented Software Design",
 
             description: "★ 3.8 (fi 6) (either term, 3-0-3/2) Software engineering \
@@ -345,7 +345,7 @@ class TimeTable extends Component {
           },
           {
             name: "ECE 311",
-            color: "lightgray",
+            color: "blue",
             extendedName: "Object-Oriented Software Design",
 
             description: "★ 3.8 (fi 6) (either term, 3-0-3/2) Software engineering \
@@ -374,7 +374,7 @@ class TimeTable extends Component {
           },
           {
             name: "STAT 235",
-            color: "lightgray",
+            color: "red",
             extendedName: "Object-Oriented Software Design",
 
             description: "★ 3.8 (fi 6) (either term, 3-0-3/2) Software engineering \
@@ -399,7 +399,7 @@ class TimeTable extends Component {
 
           {
             name: "SOC 100",
-            color: "lightgray",
+            color: "purple",
             extendedName: "Object-Oriented Software Design",
 
             description: "★ 3.8 (fi 6) (either term, 3-0-3/2) Software engineering \
@@ -424,7 +424,7 @@ class TimeTable extends Component {
 
           {
             name: "CHE 243",
-            color: "lightgray",
+            color: "pink",
             extendedName: "Object-Oriented Software Design",
 
             description: "★ 3.8 (fi 6) (either term, 3-0-3/2) Software engineering \
@@ -454,7 +454,7 @@ class TimeTable extends Component {
 
           {
             name: "ECE 321",
-            color: "lightgray",
+            color: "green",
             extendedName: "Object-Oriented Software Design",
 
             description: "★ 3.8 (fi 6) (either term, 3-0-3/2) Software engineering \
@@ -946,7 +946,7 @@ class TimeTable extends Component {
 
             <div className="leftSideWrapper">
               
-              <img src="UAlberta.png"  width="235" height="75"/>
+              <img src="UAlberta.png"  width="215" height="75"/>
              
               <div className="paletteWrapper">
                   
@@ -977,7 +977,9 @@ class TimeTable extends Component {
 
             </div>
 
-              <Table weekdays ={weekdays} tableCourses={tableCourses} addCourse={this.addCourseToTable} deleteCourseFromPalette={this.deleteCourseFromPalette} deleteSemFromPalette={this.deleteSemFromPalette} deleteLabFromPalette={this.deleteLabFromPalette} rightClickHandler={this.rightClickHandler}/>
+              <Table weekdays ={weekdays} tableCourses={tableCourses} addCourse={this.addCourseToTable} deleteCourseFromPalette={this.deleteCourseFromPalette} 
+              deleteSemFromPalette={this.deleteSemFromPalette} deleteLabFromPalette={this.deleteLabFromPalette} rightClickHandler={this.rightClickHandler}
+              stopCourseOptionDisplay={this.stopCourseOptionDisplay}/>
 
               <div>
                 <OptionDashBoard sectionDashboard={this.state.sectionDashboard}/>

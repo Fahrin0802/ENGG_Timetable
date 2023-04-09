@@ -1,7 +1,7 @@
 th, td {
     width: "relative";
     min-width: 100px;
-    height: 45px;
+    height: 36px;
     border: 0.2px solid black;
     padding: 0px;
 }
@@ -11,7 +11,7 @@ th, td {
   color: black;
   
   font-size: 13px;
-  height: 40px;
+  height: 31px;
   width: 93px;
 
   padding-top:5px;

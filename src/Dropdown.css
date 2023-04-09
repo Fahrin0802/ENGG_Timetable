@@ -2,7 +2,7 @@
     text-align: left;
     position: relative;
     border-radius: 5px;
-    width: 220px;
+    width: 215px;
   }
   
   .dropdown-input {
@@ -13,7 +13,7 @@
 
     font-weight: bold;
     font-size: 14px;
-    width: 220px;
+    width: 205px;
     cursor: pointer;
   }
 
@@ -40,6 +40,6 @@
   .complementaryStudiesElectiveDropdown{
     border: 1px solid;
     border-color: black;
-    width: 230px;
+    width: 215px;
     height: 35px;
   }

@@ -28,7 +28,7 @@ class Seminar extends Component{
                     
                     onDragStart = {(event) => this.props.onDragStart(event, seminar)}
                     onDragEnd = {(event) => this.props.onDragStop(event)}
-                    style={{ backgroundColor: seminar.color}}
+                    style={{ backgroundColor: "lightgray"}}
 
                     className="draggable"
                     courseInfo={seminar}

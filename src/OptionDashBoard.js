@@ -23,7 +23,7 @@ class OptionDashBoard extends Component{
         if(sectionDashboard.length!== 0) {
             return(
                 <div className="optionWrapper">
-                    <h4>Currently Selected Course: {sectionDashboard[0].name}</h4>
+                    <h4>Currently Selected: {sectionDashboard[0].name}</h4>
                     {optionDivCollector}
                 </div>
             )

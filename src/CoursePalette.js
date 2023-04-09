@@ -23,7 +23,7 @@ class CoursePalette extends Component{
                     onMouseLeave = {(event) => this.props.hideToolTip(event)}
 
                     onDragEnd = {(event) => this.props.onDragStop(event)}
-                    style={{ backgroundColor: course.color}}
+                    style={{ backgroundColor: "lightgray"}}
                     className="draggable" draggable
 
                     data-tooltip-content={course.description} data-tooltip-id='toolTip1'
