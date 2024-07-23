@@ -10,3 +10,8 @@ _____
 - Clone this repository
 - Type `npm start` in thee terminal while in the project directory
 _____
+# Authors
+- Fahrin Bushra- University of Alberta
+- Farhan Bin Faisal- University of Toronto
+- Xiangpeng Ji- University of Alberta
+_____
